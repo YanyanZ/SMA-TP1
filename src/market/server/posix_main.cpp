@@ -15,6 +15,7 @@
 #include <boost/bind.hpp>
 #include <boost/lexical_cast.hpp>
 #include "server.hpp"
+# include "init_server_stocks.hpp"
 
 #if !defined(_WIN32)
 
@@ -35,6 +36,10 @@ int main(int argc, char* argv[])
       std::cerr << "    receiver 0::0 80 1 .\n";
       return 1;
     }
+
+    // Init Stocks
+    http::server3::ServerStocks stocks;
+    stocks.init();
 
     // Block all signals for background thread.
     sigset_t new_mask;

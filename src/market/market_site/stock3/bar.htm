@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Stock 1 - Detail informations</title>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript">
+      var datavalue = new Array();
+      var catego = new Array();
+      $.get('stock3.txt', function(myContentFile)
+      {
+      var lines = myContentFile.split("\n");
+
+      for(var i  in lines)
+      {
+      datavalue.push(parseInt(lines[i]));
+      catego.push("Day " + i);
+      //console.log(array[i]);
+      }
+      }, 'text');
+
+      $(function () {
+        $('#container').highcharts({
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Amount of action during a month'
+            },
+            subtitle: {
+                text: 'Source: www.SMAStocks.ca:4242'
+            },
+            xAxis: {
+                categories: catego
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Amount (u)'
+                }
+            },
+            tooltip: {
+                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                    '<td style="padding:1"><b>{point.y:.1f}</b></td></tr>',
+                footerFormat: '</table>',
+                shared: true,
+                useHTML: true
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            series: [{
+                name: 'Stock 3',
+                data: datavalue
+            }]
+        });
+    });
+
+
+		</script>
+	</head>
+	<body>
+<script src="../chart/js/highcharts.js"></script>
+<script src="../chart/js/modules/exporting.js"></script>
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+	</body>
+</html>
