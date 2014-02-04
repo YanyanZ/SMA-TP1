@@ -1,0 +1,1 @@
+project_name(SMA_TP1)
