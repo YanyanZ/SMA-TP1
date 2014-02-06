@@ -1,6 +1,2 @@
-add_subdirectories(action)
-add_subdirectories(agent)
-add_subdirectories(company)
-add_subdirectories(market)
-add_subdirectories(state)
-add_subdirectories(wallet)
+add_subdirectory(agent)
+add_subdirectory(market/server)

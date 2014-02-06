@@ -3,60 +3,97 @@
   <head>
     <meta charset="utf-8">
     <title>SMA Market</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta http-equiv="refresh" content="5" />
+    <style>
+      #TCB {display:inline-block;margin-right:10px;}
+      #TCS {display:inline-block;}
+      #TCP {display:inline-block;}
 
-    <!-- Le styles -->
-    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-      }
+      #TIB {display:inline-block;margin-right:10px;}
+      #TIS {display:inline-block;}
+      #TIP {display:inline-block;}
+
+      #BIB {display:inline-block;margin-right:10px;}
+      #BIS {display:inline-block;}
+      #BIP {display:inline-block;}
+
+      #MMB {display:inline-block;margin-right:10px;}
+      #MMS {display:inline-block;}
+      #MMP {display:inline-block;}
+
+      #TEB {display:inline-block;margin-right:10px;}
+      #TES {display:inline-block;}
+      #TEP {display:inline-block;}
+
+      #amarket {display:inline-block;margin-right:10px;}
+      #aa1 {display:inline-block;}
+      #aa2 {display:inline-block;}
+      #aa3 {display:inline-block;}
     </style>
-    <link href="/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="bootstrap/js/html5shiv.js"></script>
-    <![endif]-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript" src="action.js"></script>
+    <script type="text/javascript" src="tc.js"></script>
+    <script type="text/javascript" src="ti.js"></script>
+    <script type="text/javascript" src="bi.js"></script>
+    <script type="text/javascript" src="te.js"></script>
+    <script type="text/javascript" src="mm.js"></script>
 
-    <script> 
-    $(function(){
-      $("#iStock1").load("stock1/bar.htm"); 
-    });
-    </script> 
-
+  <script src="http://code.highcharts.com/highcharts.js"></script>
+  <script src="http://code.highcharts.com/modules/exporting.js"></script>
   </head>
 
   <body>
-    <div class="container">
-      <!-- Row of columns -->
-      <div class="row">
-          <h2>Stock 1</h2>
-	<div id="iStock1"></div>
+    <center>
+      <div id="amarket">
+	<h3><center>Market actions</center></h3>
+	<textarea id="market" rows="10" cols="40"></textarea>
       </div>
-     <div class="row">
-          <h2>Stock 2</h2>
-		
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-     </div>
+      <div id="aa1">
+	<h3><center>Agents 1</center></h3>
+	<textarea id="agent1" rows="10" cols="40"></textarea>
       </div>
-
-      <hr>
-
-      <footer>
-        <p>&copy; Company 2013</p>
-      </footer>
-
-    </div> <!-- /container -->
-
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+      <div id="aa2">
+	<h3><center>Agents 2</center></h3>
+	<textarea id="agent2" rows="10" cols="40"></textarea>
+      </div>
+      <div id="aa3">
+	<h3><center>Agents 3</center></h3>
+	<textarea id="agent3" rows="10" cols="40"></textarea>
+      </div>
+    </center>
+    <br />
+    <br />
+    <h3><center>TC evolution</center><h3>
+    <br />
+    <div id="TCB" style="height: 200px; width: 410px"></div>
+    <div id="TCS" style="height: 200px; width: 410px"></div>
+    <div id="TCP" style="height: 200px; width: 410px"></div>
+    <br />
+    <h3><center>TI evolution</center><h3>
+    <br />
+    <div id="TIB" style="height: 200px; width: 410px"></div>
+    <div id="TIS" style="height: 200px; width: 410px"></div>
+    <div id="TIP" style="height: 200px; width: 410px"></div>
+    <br />
+    <h3><center>BI evolution</center><h3>
+    <br />
+    <div id="BIB" style="height: 200px; width: 410px"></div>
+    <div id="BIS" style="height: 200px; width: 410px"></div>
+    <div id="BIP" style="height: 200px; width: 410px"></div>
+    <br />
+    <h3><center>MM evolution</center><h3>
+    <br />
+    <div id="MMB" style="height: 200px; width: 410px"></div>
+    <div id="MMS" style="height: 200px; width: 410px"></div>
+    <div id="MMP" style="height: 200px; width: 410px"></div>
+    <br />
+    <h3><center>TE evolution</center><h3>
+    <br />
+    <div id="TEB" style="height: 200px; width: 410px"></div>
+    <div id="TES" style="height: 200px; width: 410px"></div>
+    <div id="TEP" style="height: 200px; width: 410px"></div>
   </body>
 </html>
