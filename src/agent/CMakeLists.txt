@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8)
 
-set(SOURCES Dummy.cpp)
+set(SOURCES Agent.cpp Banker.cpp)
 find_package(Boost 1.54 COMPONENTS system  thread iostreams REQUIRED)
 if (Boost_FOUND)
     include_directories(${Boost_INCLUDE_DIRS})

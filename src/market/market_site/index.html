@@ -5,26 +5,19 @@
     <title>SMA Market</title>
     <meta name="description" content="">
     <meta name="author" content="">
-    <meta http-equiv="refresh" content="5" />
+    <meta http-equiv="refresh" content="10" />
     <style>
       #TCB {display:inline-block;margin-right:10px;}
-      #TCS {display:inline-block;}
       #TCP {display:inline-block;}
-
-      #TIB {display:inline-block;margin-right:10px;}
-      #TIS {display:inline-block;}
+      #TIB {display:inline-block;}
       #TIP {display:inline-block;}
 
       #BIB {display:inline-block;margin-right:10px;}
-      #BIS {display:inline-block;}
       #BIP {display:inline-block;}
-
-      #MMB {display:inline-block;margin-right:10px;}
-      #MMS {display:inline-block;}
+      #MMB {display:inline-block;}
       #MMP {display:inline-block;}
 
       #TEB {display:inline-block;margin-right:10px;}
-      #TES {display:inline-block;}
       #TEP {display:inline-block;}
 
       #amarket {display:inline-block;margin-right:10px;}
@@ -35,18 +28,22 @@
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script type="text/javascript" src="action.js"></script>
+    <script type="text/javascript" src="agent0.js"></script>
+    <script type="text/javascript" src="agent1.js"></script>
+    <script type="text/javascript" src="agent2.js"></script>
     <script type="text/javascript" src="tc.js"></script>
     <script type="text/javascript" src="ti.js"></script>
     <script type="text/javascript" src="bi.js"></script>
     <script type="text/javascript" src="te.js"></script>
     <script type="text/javascript" src="mm.js"></script>
 
-  <script src="http://code.highcharts.com/highcharts.js"></script>
-  <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
   </head>
 
   <body>
     <center>
+      <h2>Refresh automatique toutes les 5 secondes</h2>
       <div id="amarket">
 	<h3><center>Market actions</center></h3>
 	<textarea id="market" rows="10" cols="40"></textarea>
@@ -66,34 +63,25 @@
     </center>
     <br />
     <br />
-    <h3><center>TC evolution</center><h3>
+    <h3><center>TC / TI evolution</center><h3>
     <br />
-    <div id="TCB" style="height: 200px; width: 410px"></div>
-    <div id="TCS" style="height: 200px; width: 410px"></div>
-    <div id="TCP" style="height: 200px; width: 410px"></div>
+    <div id="TCB" style="height: 200px; width: 300px"></div>
+    <div id="TCP" style="height: 200px; width: 300px"></div>
+    <div id="TIB" style="height: 200px; width: 300px"></div>
+    <div id="TIP" style="height: 200px; width: 300px"></div>
     <br />
-    <h3><center>TI evolution</center><h3>
+    <h3><center>BI / MM evolution</center><h3>
     <br />
-    <div id="TIB" style="height: 200px; width: 410px"></div>
-    <div id="TIS" style="height: 200px; width: 410px"></div>
-    <div id="TIP" style="height: 200px; width: 410px"></div>
-    <br />
-    <h3><center>BI evolution</center><h3>
-    <br />
-    <div id="BIB" style="height: 200px; width: 410px"></div>
-    <div id="BIS" style="height: 200px; width: 410px"></div>
-    <div id="BIP" style="height: 200px; width: 410px"></div>
-    <br />
-    <h3><center>MM evolution</center><h3>
-    <br />
-    <div id="MMB" style="height: 200px; width: 410px"></div>
-    <div id="MMS" style="height: 200px; width: 410px"></div>
-    <div id="MMP" style="height: 200px; width: 410px"></div>
+    <div id="BIB" style="height: 200px; width: 300px"></div>
+    <div id="BIP" style="height: 200px; width: 300px"></div>
+    <div id="MMB" style="height: 200px; width: 300px"></div>
+    <div id="MMP" style="height: 200px; width: 300px"></div>
     <br />
     <h3><center>TE evolution</center><h3>
     <br />
-    <div id="TEB" style="height: 200px; width: 410px"></div>
-    <div id="TES" style="height: 200px; width: 410px"></div>
-    <div id="TEP" style="height: 200px; width: 410px"></div>
+    <center>
+      <div id="TEB" style="height: 200px; width: 300px"></div>
+      <div id="TEP" style="height: 200px; width: 300px"></div>
+    </center>
   </body>
 </html>
