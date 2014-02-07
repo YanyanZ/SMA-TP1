@@ -14,7 +14,6 @@ using boost::asio::ip::tcp;
 int get_cotation(std::string name)
 {
   boost::trim(name);
-  std::cout << "'" << name << "'" << std::endl;
 
   if (name.compare("TC") == 0)
     return (*stocks)[0][(*stocks)[0].size() - 1].first;
@@ -33,7 +32,6 @@ int get_cotation(std::string name)
 int get_quantity(std::string name)
 {
   boost::trim(name);
-  std::cout << "'" << name << "'" << std::endl;
 
   if (name.compare("TC") == 0)
     return (*stocks)[0][(*stocks)[0].size() - 1].second;
@@ -312,7 +310,6 @@ void session(tcp::socket sock)
 	}
       }
 
-      std::cout << data << std::endl;
       boost::asio::write(sock, boost::asio::buffer(data, length));
     }
   }

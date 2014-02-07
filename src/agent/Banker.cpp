@@ -183,7 +183,6 @@ void Banker::run()
       log << "> Wallet = " << wallet << "$" <<std::endl;
       log.close();
     }
-    std::cout << "end" << std::endl;
   }
   catch (std::exception& e)
   {
